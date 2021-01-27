@@ -1,7 +1,12 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
+
+jobs:
+  test:
+    docker:
+      - image: circleci/<language>:<version TAG>
+    steps:
+      - run: 'npm i'
 workflows:
-  node-tests:
+  build_and_test:
     jobs:
-      - node/test
+      - test
