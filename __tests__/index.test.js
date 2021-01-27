@@ -1,7 +1,8 @@
 describe("Google", () => {
   beforeAll(async () => {
-    await page.goto("https://vaccine.heb.com/scheduler");
-    await page.waitForSelector(".sc-dlfnbm");
+    await page.goto("https://vaccine.heb.com/scheduler", {
+      waitUntil: "networkidle0",
+    });
   });
 
   it("shoud be out of appointments", async (done) => {
