@@ -10,6 +10,6 @@ describe("Google", () => {
     await expect(page).toMatch(
       "There are no appointments available, but we add new spots as we receive more vaccines. Please check back for updates."
     );
-    done();
+    await done();
   });
 });
