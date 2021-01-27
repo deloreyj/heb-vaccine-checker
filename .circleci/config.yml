@@ -19,3 +19,13 @@ workflows:
   build_and_test:
     jobs:
       - build
+  nightly:
+    triggers:
+      - schedule:
+          cron: "* * * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
