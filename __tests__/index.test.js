@@ -1,7 +1,9 @@
+jest.setTimeout(7000)
+
 describe("Google", () => {
   beforeAll(async () => {
     await page.goto("https://vaccine.heb.com/scheduler");
-    await page.waitForNavigation({ timeout: 10000 });
+    await page.waitForNavigation(;
   });
 
   it("shoud be out of appointments", async (done) => {
