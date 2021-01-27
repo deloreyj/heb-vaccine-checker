@@ -19,3 +19,9 @@ workflows:
   build_and_test:
     jobs:
       - build
+  nightly:
+    triggers:
+      - schedule:
+          cron: "*/5 * * * *"
+    jobs:
+      - build
