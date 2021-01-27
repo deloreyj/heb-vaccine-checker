@@ -1,19 +1,15 @@
 version: 2.1
-
 jobs:
   build:
     docker:
-      - image: circleci/<language>:<version TAG>
+      - image: circleci/node:10-browsers
     steps:
       - checkout
-  test:
-    docker:
-      - image: circleci/<language>:<version TAG>
-    steps:
-      - run: 'npm i'
-      - run: 'test'
-workflows:
-  build_and_test:
-    jobs:
-      - build
-      - test
+      - run:
+          name: The First Step
+          command: |
+            npm i
+      - run:
+          name: The Second Step
+          command: |
+            npm test
