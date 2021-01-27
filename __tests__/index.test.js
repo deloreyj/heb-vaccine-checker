@@ -1,7 +1,7 @@
 describe("Google", () => {
   beforeAll(async () => {
     await page.goto("https://vaccine.heb.com/scheduler");
-    // await page.waitForNavigation();
+    await page.waitForSelector(".sc-dlfnbm");
   });
 
   it("shoud be out of appointments", async (done) => {
