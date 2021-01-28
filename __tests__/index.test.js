@@ -7,7 +7,7 @@ describe("Google", () => {
 
   it("shoud be out of appointments", async (done) => {
     await expect(page).toMatch(
-      "There are no appointments available, but we add new spots as we receive more vaccines. Please check back for updates. fail test"
+      "There are no appointments available, but we add new spots as we receive more vaccines. Please check back for updates."
     );
     await done();
   });
