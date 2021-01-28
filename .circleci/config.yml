@@ -18,7 +18,37 @@ jobs:
       - slack/notify:
           channel: heb-updates
           event: fail
-          template: basic_fail_1
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "Vaccines are available! 💉",
+                    "emoji": true
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "Click here to schedule:"
+                  },
+                  "accessory": {
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Schedule",
+                      "emoji": true
+                    },
+                    "value": "vaccine",
+                    "url": "https://vaccine.heb.com/scheduler",
+                    "action_id": "button-action"
+                  }
+                }
+              ]
+            }
 
 workflows:
   version: 2
