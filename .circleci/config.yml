@@ -24,9 +24,8 @@ jobs:
                 {
                   "type": "section",
                   "text": {
-                    "type": "plain_text",
-                    "text": "Vaccines are available! 💉",
-                    "emoji": true
+                    "type": "mrkdwn",
+                    "text": "*Vaccines are available! 💉*"
                   }
                 },
                 {
